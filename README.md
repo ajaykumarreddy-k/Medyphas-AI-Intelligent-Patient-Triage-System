@@ -206,7 +206,3 @@ Always consult a qualified healthcare provider for medical advice.
 **Ajay Kumar Reddy**
 
 ---
-
-# 📌 Repository Description (Paste Into GitHub Description Field)
-
-AI-powered intelligent patient triage and clinical decision-support platform with real-time doctor queue and ML-driven symptom analysis.
