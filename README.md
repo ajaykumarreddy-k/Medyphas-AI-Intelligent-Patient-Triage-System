@@ -1,158 +1,212 @@
-# Medyphas AI - Next-Gen Medical Intelligence Platform
+# 🧠 Mediphas AI – Intelligent Patient Triage System
 
-**Medyphas AI** is a state-of-the-art healthcare platform designed to revolutionize the patient-doctor interaction through Advanced Artificial Intelligence. Built for high-stakes environments like National Hackathons, it bridges the gap between immediate symptom relief and professional medical care in a unified, visually stunning interface.
+**Mediphas AI** is an AI-powered clinical triage and decision-support platform designed to bridge the gap between patient anxiety and professional medical care.
 
-![Landing Page](preview/landing.png)
+Built for high-impact environments such as hospitals, emergency workflows, and national hackathons, it delivers:
 
-## 🌟 Why Medyphas AI? (USP)
-
-### 1. Dual-Perspective Intelligence
-Most health apps focus on either the patient (trackers) or the doctor (EHR). **Medyphas AI** integrates both:
-- **For Patients:** Immediate anxiety relief through **Quick Fix AI** and automated Triage.
-- **For Doctors:** A prioritized **Live Queue** that highlights critical cases before they even walk in the door.
-
-### 2. "Quick Fix" AI Engine
-We don't just tell you to "go to the doctor." For non-critical issues (headaches, mild allergies), our custom-trained Machine Learning model provides:
-- **Instant Disease Prediction**: Based on your specific symptoms.
-- **OTC Medication Recommendations**: Safe, over-the-counter suggestions to manage symptoms immediately.
-- **Confidence Scoring**: Keeps users safe by flagging low-confidence predictions for professional review.
-
-### 3. Pixel-Perfect "Glassmorphism" UI
-Healthcare software is notoriously ugly. Medyphas AI breaks the mold with a premium, consumer-grade aesthetic featuring:
-- **Glassmorphism**: Frosted glass effects for depth and hierarchy.
-- **Dark Mode**: Fully supported, eye-strain reducing interface.
-- **Fluid Animations**: `animate-in` transitions that make the app feel alive.
+- Real-time patient triage  
+- AI-driven symptom intelligence  
+- Doctor-prioritized live queues  
+- Safe OTC recommendations  
+- Modern, premium healthcare UI  
 
 ---
 
-## 📸 Feature Gallery
+# 🌟 Core Value Proposition
 
-### The Patient Experience
+## 🔹 Dual-Perspective Intelligence
 
-#### **1. Quick Fix AI**
-*Instant AI recommendations for common symptoms using our custom ML model.*
-![Quick Fix AI](preview/quick_fix.png)
-
-#### **2. Smart Triage Assessment**
-*Automated risk assessment (Normal/Urgent/Critical) based on vitals and symptoms.*
-![Triage Assessment](preview/triage_assessment.png)
-
-#### **3. My Health Dashboard**
-*Track vitals and medical history in one place.*
-![My Health Dashboard](preview/patient_my_health.png)
-
-#### **4. Secure Sign Up**
-*Easy onboarding for new patients.*
-![Sign Up](preview/signup.png)
+Unlike traditional health applications that focus on either patients or doctors, **Mediphas AI unifies both experiences into a single intelligent system.**
 
 ---
 
-### The Doctor Experience
+## 👤 Patient Experience
 
-#### **1. Live Patient Queue**
-*Real-time prioritized list of incoming patients, sorted by severity.*
-![Doctor Queue](preview/doctor_queue.png)
-
-#### **2. AI Diagnostics Suite**
-*Deep-dive analysis of patient symptoms to assist in diagnosis.*
-![Doctor Diagnostics](preview/doctor_diagnostics.png)
-
-#### **3. Population Analytics**
-*Visual insights into hospital performance and patient demographics.*
-![Analytics](preview/doctor_analytics.png)
-
-#### **4. Command Center**
-*The central hub for medical staff to manage appointments and tasks.*
-![Doctor Dashboard](preview/dashboard_doctor.png)
+- Instant AI symptom analysis  
+- Automated risk classification (Normal / Urgent / Critical)  
+- Safe over-the-counter guidance  
+- Confidence scoring for safety  
+- Personal health dashboard  
+- Secure authentication system  
 
 ---
 
-## 🏗️ Technical Architecture
+## 🩺 Doctor Experience
 
-Medyphas AI uses a modern, decoupled architecture designed for scale and performance.
+- Real-time prioritized live queue  
+- AI-assisted diagnostic overview  
+- WebSocket-based instant updates  
+- Population analytics dashboard  
+- Centralized medical command center  
+
+Critical patients are automatically prioritized before they even walk in.
+
+---
+
+# 🧠 Quick Fix AI Engine
+
+The **Quick Fix AI** system solves the “Dr. Google” problem.
+
+Instead of anxiety-inducing search results, users receive:
+
+- ✅ Instant disease probability prediction  
+- ✅ Safe OTC medication suggestions  
+- ✅ Confidence scoring  
+- ✅ Auto-escalation for high-risk symptoms  
+
+Low-confidence predictions are automatically flagged for professional review to maintain safety standards.
+
+---
+
+# 🚦 Smart Clinical Triage
+
+Automated severity classification based on:
+
+- Reported symptoms  
+- Vital inputs  
+- Severity mapping logic  
+
+### Output Levels
+
+- 🟢 Normal  
+- 🟡 Urgent  
+- 🔴 Critical  
+
+Doctors see critical cases first through a dynamically sorted queue.
+
+---
+
+# 🏗️ System Architecture
+
+## 🔷 High-Level Architecture Diagram
 
 ```mermaid
-graph TD
-    User[User (Patient/Doctor)] -->|HTTPS| Frontend
-    
-    subgraph "Client Side (Frontend)"
-        Frontend[React + TypeScript + Vite]
-        State[Context API (Auth/Theme)]
-        UI[Tailwind CSS (Glassmorphism)]
-        Router[React Router DOM]
-    end
-    
-    Frontend -->|REST API + WebSocket| Backend
-    
-    subgraph "Server Side (Backend)"
-        Backend[FastAPI (Python)]
-        Auth[JWT Authentication]
-        Svc[Service Layer]
-    end
-    
-    subgraph "Intelligence Layer (ML)"
-        Model[Scikit-Learn Model]
-        Encoder[Label Encoders]
-        Data[Symptom Dataset]
-    end
-    
-    Svc -->|Predict| Model
-    Svc -->|Transform| Encoder
+flowchart TD
+
+    %% User Layer
+    A[Patient] -->|HTTPS| B[Frontend - React + TypeScript]
+    D[Doctor] -->|HTTPS| B
+
+    %% Frontend Layer
+    B -->|REST API| C[FastAPI Backend]
+    B -->|WebSocket| C
+
+    %% Backend Layer
+    C --> E[JWT Authentication]
+    C --> F[Service Layer]
+    F --> G[Quick Fix ML Model]
+    F --> H[Triage Engine]
+    F --> I[Database]
+
+    %% ML Layer
+    G --> J[RandomForestClassifier]
+    G --> K[Label Encoders]
+    J --> L[Symptom Dataset]
+
+    %% Data Layer
+    I --> M[(Patient Records)]
+    I --> N[(Doctor Queue)]
 ```
-
-### Client-Side Logic (Frontend)
-- **Framework**: Built with `React 18` and `TypeScript` for type safety.
-- **State Management**: Uses React `Context API` for global efficient state (Authentication, Theme, Notifications).
-- **Styling**: `Tailwind CSS` with custom configuration for colors, shadows (`box-shadow`), and glass effects (`backdrop-filter`).
-- **Performance**: Optimized with `Vite` for instant HMR and optimized production builds.
-
-### Server-Side Logic (Backend & ML)
-- **Framework**: `FastAPI` provides high-performance, async capabilities.
-- **ML Engine**:
-    - **Model**: `RandomForestClassifier` (Scikit-learn) trained on a dataset of 40+ diseases and 130+ symptoms.
-    - **Persistence**: Models are serialized using `joblib`/`pickle` as `.pkl` files.
-    - **`quickfix_model.pkl`**: The core brain that maps symptom vectors to disease predictions.
-    - **`label_encoders.pkl`**: Handles the translation of human-readable symptoms into machine-readable tensors.
-- **Real-Time**: WebSocket integration for live updates to the Doctor's Queue.
 
 ---
 
-## 🚀 Getting Started
+## 🧩 Architecture Breakdown
 
-### Prerequisites
-- Node.js (v16+)
-- Python (v3.10+)
+### 🖥 Frontend
+- React 18  
+- TypeScript  
+- Vite  
+- Tailwind CSS (Glassmorphism UI)  
+- Context API (Auth / Theme / Notifications)  
+- React Router DOM  
 
-### 1. Backend Setup
+### ⚙️ Backend
+- FastAPI (Python)  
+- JWT Authentication  
+- REST API  
+- WebSocket Integration  
+- Modular Service Layer  
+
+### 🤖 Machine Learning Layer
+- RandomForestClassifier (Scikit-learn)  
+- 40+ diseases  
+- 130+ symptoms  
+- Model serialized using joblib (.pkl)  
+- Label encoders for feature mapping  
+
+Core Files:
+- `quickfix_model.pkl`
+- `label_encoders.pkl`
+
+---
+
+# 🚀 Getting Started
+
+## 1️⃣ Backend Setup
+
 ```bash
 cd triageai-backend
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
-# Train the AI Model (Important!)
+# Train AI Model
 python ml/train_quickfix.py
 
-# Start the Server
+# Start Server
 uvicorn app.main:app --reload --port 8000
 ```
 
-### 2. Frontend Setup
+---
+
+## 2️⃣ Frontend Setup
+
 ```bash
-cd medyphas-ai---intelligence-hub
+cd mediphas-ai-frontend
 npm install
 npm run dev
 ```
 
-### 3. Access
-Open your browser to [http://localhost:3000](http://localhost:3000).
+---
+
+## 🌐 Access Application
+
+Open your browser:
+
+```
+http://localhost:3000
+```
 
 ---
 
-## 🏆 Hackathon Notes
-- **Theme**: Healthcare / AI for Good.
-- **Innovation**: The "Quick Fix" feature addresses the "Dr. Google" problem by providing safe, AI-vetted advice instead of panic-inducing search results.
-- **Completeness**: Full end-to-end flow from Symptom -> Triage -> Diagnosis -> Appointment.
+# 🏆 Hackathon Advantage
 
-Built with ❤️ by **Ajay**.
-# Mediphas-AI-Intelligent-Patient-Triage-System
+Mediphas AI stands out because:
+
+- Real ML model (not rule-based demo logic)  
+- End-to-end working healthcare pipeline  
+- Dual dashboard (Patient + Doctor)  
+- Real-time WebSocket queue prioritization  
+- Clean enterprise-grade architecture  
+- Modern, premium UI design  
+- Built-in AI safety escalation logic  
+
+---
+
+# 🔒 Medical Disclaimer
+
+Mediphas AI is intended for educational, triage assistance, and decision-support purposes only.  
+It does not replace licensed medical professionals.  
+Always consult a qualified healthcare provider for medical advice.
+
+---
+
+# 👨‍💻 Built By
+
+**Ajay Kumar Reddy**
+
+---
+
+# 📌 Repository Description (Paste Into GitHub Description Field)
+
+AI-powered intelligent patient triage and clinical decision-support platform with real-time doctor queue and ML-driven symptom analysis.
