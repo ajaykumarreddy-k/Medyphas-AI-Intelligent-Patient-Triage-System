@@ -179,8 +179,6 @@ http://localhost:3000
 
 ---
 
-# 🏆 Hackathon Advantage
-
 Mediphas AI stands out because:
 
 - Real ML model (not rule-based demo logic)  
