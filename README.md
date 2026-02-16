@@ -1,14 +1,14 @@
 # 🧠 Mediphas AI – Intelligent Patient Triage System
 
-**Mediphas AI** is an AI-powered clinical triage and decision-support platform designed to bridge the gap between patient anxiety and professional medical care.
+**Mediphas AI** is a next-generation clinical triage and decision-support platform designed to bridge the gap between patient anxiety and professional medical care using **Hybrid AI Architecture**.
 
 Built for high-impact environments such as hospitals, emergency workflows, and national hackathons, it delivers:
 
-- Real-time patient triage  
-- AI-driven symptom intelligence  
-- Doctor-prioritized live queues  
-- Safe OTC recommendations  
-- Modern, premium healthcare UI  
+- ⚡ **Real-time Patient Triage** (WebSocket-powered)
+- 🧠 **Hybrid AI Intelligence** (Random Forest + Gemini 1.5 Pro)
+- 🏥 **Doctor-Prioritized Live Queues**
+- 🛡️ **Safety-First Clinical Logic**
+- 🎨 **Glassmorphism Healthcare UI**
 
 ---
 
@@ -16,63 +16,45 @@ Built for high-impact environments such as hospitals, emergency workflows, and n
 
 ## 🔹 Dual-Perspective Intelligence
 
-Unlike traditional health applications that focus on either patients or doctors, **Mediphas AI unifies both experiences into a single intelligent system.**
+Unlike traditional health applications that focus on either patients or doctors, **Mediphas AI unifies both experiences into a single intelligent ecosystem.**
 
 ---
 
 ## 👤 Patient Experience
 
-- Instant AI symptom analysis  
-- Automated risk classification (Normal / Urgent / Critical)  
-- Safe over-the-counter guidance  
-- Confidence scoring for safety  
-- Personal health dashboard  
-- Secure authentication system  
+- **Instant Symptom Analysis:** Powered by our Rapid Diagnostic Engine.
+- **Automated Risk Classification:** Real-time categorization (Normal / Urgent / Critical).
+- **Generative Health Insights:** Detailed, context-aware explanations via Gemini AI.
+- **Personal Health Dashboard:** Track vitals and history securely.
 
 ---
 
 ## 🩺 Doctor Experience
 
-- Real-time prioritized live queue  
-- AI-assisted diagnostic overview  
-- WebSocket-based instant updates  
-- Population analytics dashboard  
-- Centralized medical command center  
+- **Live Triage Command Center:** Auto-sorted queues based on severity, not arrival time.
+- **AI-Assisted Diagnostics:** Pre-generated clinical summaries for faster decision-making.
+- **Real-Time Vitals Monitoring:** Instant WebSocket updates from patient inputs.
+- **Population Health Analytics:** Macro-level view of disease trends.
 
-Critical patients are automatically prioritized before they even walk in.
-
----
-
-# 🧠 Quick Fix AI Engine
-
-The **Quick Fix AI** system solves the “Dr. Google” problem.
-
-Instead of anxiety-inducing search results, users receive:
-
-- ✅ Instant disease probability prediction  
-- ✅ Safe OTC medication suggestions  
-- ✅ Confidence scoring  
-- ✅ Auto-escalation for high-risk symptoms  
-
-Low-confidence predictions are automatically flagged for professional review to maintain safety standards.
+*Critical patients are automatically flagged and prioritized before they even enter the consultation room.*
 
 ---
 
-# 🚦 Smart Clinical Triage
+# ⚡ Rapid Diagnostic & Triage Engine
 
-Automated severity classification based on:
+Mediphas AI utilizes a **Hybrid Intelligence Model** to solve the "Dr. Google" problem with precision and speed.
 
-- Reported symptoms  
-- Vital inputs  
-- Severity mapping logic  
+### 1. The Fast Layer (Triage Engine)
+A high-performance classifier that provides **sub-millisecond** risk assessment:
+- ✅ **Instant Severity Mapping:** (Normal / Urgent / Critical)
+- ✅ **Structural Symptom Encoders:** Maps raw inputs to 130+ clinical vectors.
+- ✅ **Safety Protocol:** Auto-escalation for high-risk symptoms (e.g., chest pain).
 
-### Output Levels
-
-- 🟢 Normal  
-- 🟡 Urgent  
-- 🔴 Critical  
-
-Doctors see critical cases first through a dynamically sorted queue.
+### 2. The Deep Layer (Generative Clinical Core)
+Powered by **Google Gemini 1.5 Pro**, this layer handles complex reasoning:
+- 🧠 **Contextual Analysis:** Understands patient history nuances.
+- 💊 **Pharmacological Safety:** Cross-checks OTC recommendations against contraindications.
+- 📝 **Clinical Summarization:** Generates SOAP notes for doctors automatically.
 
 ---
 
@@ -89,118 +71,25 @@ flowchart TD
 
     %% Frontend Layer
     B -->|REST API| C[FastAPI Backend]
-    B -->|WebSocket| C
+    B -->|WebSocket - Realtime| C
 
     %% Backend Layer
     C --> E[JWT Authentication]
-    C --> F[Service Layer]
-    F --> G[Quick Fix ML Model]
-    F --> H[Triage Engine]
-    F --> I[Database]
+    C --> F[Service Layer / Controller]
+    
+    %% Hybrid AI Core
+    F --> G[Rapid Diagnostic Engine]
+    F --> O[Gemini 1.5 Pro API]
+    
+    %% Data Persistence
+    F --> I[PostgreSQL / Database]
 
-    %% ML Layer
-    G --> J[RandomForestClassifier]
+    %% ML Components
+    G --> J[RandomForest Classifier]
     G --> K[Label Encoders]
-    J --> L[Symptom Dataset]
+    J --> L[Symptom Vector Space]
+    O --> P[Generative Clinical Insights]
 
     %% Data Layer
     I --> M[(Patient Records)]
-    I --> N[(Doctor Queue)]
-```
-
----
-
-## 🧩 Architecture Breakdown
-
-### 🖥 Frontend
-- React 18  
-- TypeScript  
-- Vite  
-- Tailwind CSS (Glassmorphism UI)  
-- Context API (Auth / Theme / Notifications)  
-- React Router DOM  
-
-### ⚙️ Backend
-- FastAPI (Python)  
-- JWT Authentication  
-- REST API  
-- WebSocket Integration  
-- Modular Service Layer  
-
-### 🤖 Machine Learning Layer
-- RandomForestClassifier (Scikit-learn)  
-- 40+ diseases  
-- 130+ symptoms  
-- Model serialized using joblib (.pkl)  
-- Label encoders for feature mapping  
-
-Core Files:
-- `quickfix_model.pkl`
-- `label_encoders.pkl`
-
----
-
-# 🚀 Getting Started
-
-## 1️⃣ Backend Setup
-
-```bash
-cd triageai-backend
-python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-
-# Train AI Model
-python ml/train_quickfix.py
-
-# Start Server
-uvicorn app.main:app --reload --port 8000
-```
-
----
-
-## 2️⃣ Frontend Setup
-
-```bash
-cd mediphas-ai-frontend
-npm install
-npm run dev
-```
-
----
-
-## 🌐 Access Application
-
-Open your browser:
-
-```
-http://localhost:3000
-```
-
----
-
-Mediphas AI stands out because:
-
-- Real ML model (not rule-based demo logic)  
-- End-to-end working healthcare pipeline  
-- Dual dashboard (Patient + Doctor)  
-- Real-time WebSocket queue prioritization  
-- Clean enterprise-grade architecture  
-- Modern, premium UI design  
-- Built-in AI safety escalation logic  
-
----
-
-# 🔒 Medical Disclaimer
-
-Mediphas AI is intended for educational, triage assistance, and decision-support purposes only.  
-It does not replace licensed medical professionals.  
-Always consult a qualified healthcare provider for medical advice.
-
----
-
-# 👨‍💻 Built By
-
-**Ajay Kumar Reddy**
-
----
+    I --> N[(Doctor Priority Queue)]
