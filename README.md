@@ -93,3 +93,58 @@ flowchart TD
     %% Data Layer
     I --> M[(Patient Records)]
     I --> N[(Doctor Priority Queue)]
+
+🧩 Tech Stack & Engineering
+🖥 Frontend (Client)
+ * Framework: React 18 + TypeScript + Vite
+ * Styling: Tailwind CSS (Custom Glassmorphism Design System)
+ * State Management: Context API (Auth / Theme / Notifications)
+ * Routing: React Router DOM v6
+⚙️ Backend (Server)
+ * Framework: FastAPI (Python 3.10+) - Async High Performance
+ * Real-Time: Native WebSocket Implementation for Live Queues
+ * Security: JWT (JSON Web Tokens) + Bcrypt Hashing
+ * Architecture: Modular Service-Repository Pattern
+🤖 Hybrid AI Layer
+ * Triage Model: Scikit-learn Random Forest (Optimized for <10ms latency)
+ * Generative Core: Google Gemini 1.5 Pro (via Google AI Studio API)
+ * Dataset: Trained on 40+ disease classes and 130+ symptom vectors.
+ * Serialization: Joblib optimized model persistence (.pkl)
+🚀 Getting Started
+1️⃣ Backend Setup
+cd triageai-backend
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+
+# Configure Environment
+# Create a .env file and add your GEMINI_API_KEY
+
+# Train Local Triage Model
+python ml/train_model.py
+
+# Start High-Performance Server
+uvicorn app.main:app --reload --port 8000
+
+2️⃣ Frontend Setup
+cd mediphas-ai-frontend
+npm install
+npm run dev
+
+🌐 Access Application
+Open your browser:
+http://localhost:3000
+
+🏆 Why Mediphas AI?
+ * True Hybrid AI: Combines the speed of traditional ML with the reasoning of LLMs.
+ * End-to-End Pipeline: From patient symptom input to doctor dashboard visualization.
+ * Enterprise-Grade Architecture: Separation of concerns, secure auth, and scalable backend.
+ * Real-Time Operations: Zero-latency queue updates using WebSockets.
+ * Built for Safety: Built-in escalation logic for critical conditions.
+🔒 Medical Disclaimer
+Mediphas AI is intended for educational, triage assistance, and decision-support purposes only.
+It does not replace licensed medical professionals.
+Always consult a qualified healthcare provider for medical advice.
+👨‍💻 Built By
+Ajay Kumar Reddy Full Stack Developer & AI Engineer
+
