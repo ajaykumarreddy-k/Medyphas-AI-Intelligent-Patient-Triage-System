@@ -93,34 +93,25 @@ flowchart TD
     %% Data Layer
     I --> M[(Patient Records)]
     I --> N[(Doctor Priority Queue)]
-'''
-## 🧩 Tech Stack & Engineering
 
-### 🖥 Frontend (Client)
-- **Framework:** React 18 + TypeScript + Vite
-- **Styling:** Tailwind CSS (Custom Glassmorphism Design System)
-- **State Management:** Context API (Auth / Theme / Notifications)
-- **Routing:** React Router DOM v6
-
-### ⚙️ Backend (Server)
-- **Framework:** FastAPI (Python 3.10+) - Async High Performance
-- **Real-Time:** Native WebSocket Implementation for Live Queues
-- **Security:** JWT (JSON Web Tokens) + Bcrypt Hashing
-- **Architecture:** Modular Service-Repository Pattern
-
-### 🤖 Hybrid AI Layer
-- **Triage Model:** Scikit-learn Random Forest (Optimized for <10ms latency)
-- **Generative Core:** Google Gemini 1.5 Pro (via Google AI Studio API)
-- **Dataset:** Trained on 40+ disease classes and 130+ symptom vectors.
-- **Serialization:** Joblib optimized model persistence (`.pkl`)
-
----
-
-# 🚀 Getting Started
-
-## 1️⃣ Backend Setup
-
-```bash
+🧩 Tech Stack & Engineering
+🖥 Frontend (Client)
+ * Framework: React 18 + TypeScript + Vite
+ * Styling: Tailwind CSS (Custom Glassmorphism Design System)
+ * State Management: Context API (Auth / Theme / Notifications)
+ * Routing: React Router DOM v6
+⚙️ Backend (Server)
+ * Framework: FastAPI (Python 3.10+) - Async High Performance
+ * Real-Time: Native WebSocket Implementation for Live Queues
+ * Security: JWT (JSON Web Tokens) + Bcrypt Hashing
+ * Architecture: Modular Service-Repository Pattern
+🤖 Hybrid AI Layer
+ * Triage Model: Scikit-learn Random Forest (Optimized for <10ms latency)
+ * Generative Core: Google Gemini 1.5 Pro (via Google AI Studio API)
+ * Dataset: Trained on 40+ disease classes and 130+ symptom vectors.
+ * Serialization: Joblib optimized model persistence (.pkl)
+🚀 Getting Started
+1️⃣ Backend Setup
 cd triageai-backend
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
