@@ -58,8 +58,6 @@ Powered by **Google Gemini 1.5 Pro**, this layer handles complex reasoning:
 
 ---
 
-# 🏗️ System Architecture
-
 ## 🔷 High-Level Architecture Diagram
 
 ```mermaid
@@ -146,5 +144,6 @@ Mediphas AI is intended for educational, triage assistance, and decision-support
 It does not replace licensed medical professionals.
 Always consult a qualified healthcare provider for medical advice.
 👨‍💻 Built By
-Ajay Kumar Reddy Full Stack Developer & AI Engineer
+Ajay Kumar Reddy
+Full Stack Developer & AI Engineer
 
