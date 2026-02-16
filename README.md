@@ -1,12 +1,14 @@
-# 🧠 Mediphas AI – Intelligent Patient Triage System
+# 🧠 Medyphas AI – Intelligent Patient Triage System
 
-**Mediphas AI** is a next-generation clinical triage and decision-support platform designed to bridge the gap between patient anxiety and professional medical care using **Hybrid AI Architecture**.
+![Medyphas AI Banner](https://img.shields.io/badge/Status-Production%20Ready-success?style=for-the-badge) ![AI Model](https://img.shields.io/badge/AI-Hybrid%20Architecture-blueviolet?style=for-the-badge) ![Tech Stack](https://img.shields.io/badge/Stack-React%20%7C%20FastAPI%20%7C%20Gemini-blue?style=for-the-badge)
 
-Built for high-impact environments such as hospitals, emergency workflows, and national hackathons, it delivers:
+**Medyphas AI** is a next-generation clinical triage and decision-support platform designed to bridge the gap between patient anxiety and professional medical care using a **Hybrid AI Architecture**.
 
-- ⚡ **Real-time Patient Triage** (WebSocket-powered)
-- 🧠 **Hybrid AI Intelligence** (Random Forest + Gemini 1.5 Pro)
-- 🏥 **Doctor-Prioritized Live Queues**
+Built for high-impact environments such as hospitals and emergency workflows, it delivers:
+
+- ⚡ **Real-time Patient Triage** (WebSocket-powered live queues)
+- 🧠 **Hybrid AI Intelligence** (Random Forest + Google Gemini 1.5 Pro)
+- 🏥 **Doctor-Prioritized Command Center**
 - 🛡️ **Safety-First Clinical Logic**
 - 🎨 **Glassmorphism Healthcare UI**
 
@@ -16,42 +18,36 @@ Built for high-impact environments such as hospitals, emergency workflows, and n
 
 ## 🔹 Dual-Perspective Intelligence
 
-Unlike traditional health applications that focus on either patients or doctors, **Mediphas AI unifies both experiences into a single intelligent ecosystem.**
+Unlike traditional health applications that focus on either patients or doctors, **Medyphas AI unifies both experiences into a single intelligent ecosystem.**
 
----
+### 👤 Patient Experience
+- **Instant Symptom Analysis:** Powered by our Rapid Diagnostic Engine (<10ms response).
+- **Automated Risk Classification:** Real-time categorization (**Normal** / **Urgent** / **Critical**).
+- **Generative Health Insights:** Detailed, context-aware explanations via **Gemini 1.5 Pro**.
+- **Personal Health Dashboard:** Secure tracking of vitals and history.
 
-## 👤 Patient Experience
-
-- **Instant Symptom Analysis:** Powered by our Rapid Diagnostic Engine.
-- **Automated Risk Classification:** Real-time categorization (Normal / Urgent / Critical).
-- **Generative Health Insights:** Detailed, context-aware explanations via Gemini AI.
-- **Personal Health Dashboard:** Track vitals and history securely.
-
----
-
-## 🩺 Doctor Experience
-
+### 🩺 Doctor Experience
 - **Live Triage Command Center:** Auto-sorted queues based on severity, not arrival time.
 - **AI-Assisted Diagnostics:** Pre-generated clinical summaries for faster decision-making.
 - **Real-Time Vitals Monitoring:** Instant WebSocket updates from patient inputs.
-- **Population Health Analytics:** Macro-level view of disease trends.
+- **Population Analytics:** Macro-level view of disease trends.
 
-*Critical patients are automatically flagged and prioritized before they even enter the consultation room.*
+> *Critical patients are automatically flagged and prioritized before they even enter the consultation room.*
 
 ---
 
-# ⚡ Rapid Diagnostic & Triage Engine
+# ⚡ The Hybrid AI Engine
 
-Mediphas AI utilizes a **Hybrid Intelligence Model** to solve the "Dr. Google" problem with precision and speed.
+Medyphas AI utilizes a **Hybrid Intelligence Model** to combine speed with reasoning.
 
 ### 1. The Fast Layer (Triage Engine)
-A high-performance classifier that provides **sub-millisecond** risk assessment:
-- ✅ **Instant Severity Mapping:** (Normal / Urgent / Critical)
+A high-performance classifier for immediate risk assessment:
+- ✅ **Instant Severity Mapping:** Assigns Red/Yellow/Green codes instantly.
 - ✅ **Structural Symptom Encoders:** Maps raw inputs to 130+ clinical vectors.
 - ✅ **Safety Protocol:** Auto-escalation for high-risk symptoms (e.g., chest pain).
 
 ### 2. The Deep Layer (Generative Clinical Core)
-Powered by **Google Gemini 1.5 Pro**, this layer handles complex reasoning:
+Powered by **Google Gemini 1.5 Pro**, this layer handles complex medical reasoning:
 - 🧠 **Contextual Analysis:** Understands patient history nuances.
 - 💊 **Pharmacological Safety:** Cross-checks OTC recommendations against contraindications.
 - 📝 **Clinical Summarization:** Generates SOAP notes for doctors automatically.
@@ -93,25 +89,45 @@ flowchart TD
     %% Data Layer
     I --> M[(Patient Records)]
     I --> N[(Doctor Priority Queue)]
-
+```
 🧩 Tech Stack & Engineering
 🖥 Frontend (Client)
- * Framework: React 18 + TypeScript + Vite
- * Styling: Tailwind CSS (Custom Glassmorphism Design System)
- * State Management: Context API (Auth / Theme / Notifications)
- * Routing: React Router DOM v6
+Framework: React 18 + TypeScript + Vite
+
+Styling: Tailwind CSS (Custom Glassmorphism UI)
+
+State Management: Context API (Auth / Theme / Notifications)
+
+Routing: React Router DOM v6
+
 ⚙️ Backend (Server)
- * Framework: FastAPI (Python 3.10+) - Async High Performance
- * Real-Time: Native WebSocket Implementation for Live Queues
- * Security: JWT (JSON Web Tokens) + Bcrypt Hashing
- * Architecture: Modular Service-Repository Pattern
-🤖 Hybrid AI Layer
- * Triage Model: Scikit-learn Random Forest (Optimized for <10ms latency)
- * Generative Core: Google Gemini 1.5 Pro (via Google AI Studio API)
- * Dataset: Trained on 40+ disease classes and 130+ symptom vectors.
- * Serialization: Joblib optimized model persistence (.pkl)
+Framework: FastAPI (Python 3.10+) - Async High Performance
+
+Real-Time Data: Native WebSocket Implementation for Live Queues
+
+Security: JWT (JSON Web Tokens) + Bcrypt Hashing
+
+Architecture: Modular Service-Repository Pattern
+
+🤖 Machine Learning Layer
+Triage Model: Scikit-learn Random Forest (Trained on 40+ diseases, 130+ symptoms)
+
+Generative Core: Google Gemini 1.5 Pro (via Google AI Studio API)
+
+Serialization: Joblib optimized model persistence (.pkl)
+
+💼 Business & Clinical Impact (B2B SaaS Model)
+Medyphas AI isn't just a technical prototype; it's designed for enterprise healthcare deployment:
+
+Total Addressable Market (TAM): $650B Global Digital Health Market.
+
+Serviceable Addressable Market (SAM): $180B AI in Healthcare Market (by 2030).
+
+Hospital ROI: Reduces average patient waiting room time, mitigates clinical burnout, and ensures critical patients are seen faster, lowering malpractice risk.
+
 🚀 Getting Started
 1️⃣ Backend Setup
+Bash
 cd triageai-backend
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
@@ -125,27 +141,16 @@ python ml/train_model.py
 
 # Start High-Performance Server
 uvicorn app.main:app --reload --port 8000
-
 2️⃣ Frontend Setup
+Bash
 cd mediphas-ai-frontend
 npm install
 npm run dev
-
 🌐 Access Application
-Open your browser:
-http://localhost:3000
+Open your browser to http://localhost:3000
 
-🏆 Why Mediphas AI?
- * True Hybrid AI: Combines the speed of traditional ML with the reasoning of LLMs.
- * End-to-End Pipeline: From patient symptom input to doctor dashboard visualization.
- * Enterprise-Grade Architecture: Separation of concerns, secure auth, and scalable backend.
- * Real-Time Operations: Zero-latency queue updates using WebSockets.
- * Built for Safety: Built-in escalation logic for critical conditions.
 🔒 Medical Disclaimer
-Mediphas AI is intended for educational, triage assistance, and decision-support purposes only.
-It does not replace licensed medical professionals.
-Always consult a qualified healthcare provider for medical advice.
-👨‍💻 Built By
-Ajay Kumar Reddy Full Stack Developer & AI Engineer
+Medyphas AI is intended for educational, triage assistance, and decision-support purposes only. It does not replace licensed medical professionals. Always consult a qualified healthcare provider for medical advice.
 
-.
+👨‍💻 Built By
+Ajay Kumar Reddy - Full Stack Developer & AI Engineer
