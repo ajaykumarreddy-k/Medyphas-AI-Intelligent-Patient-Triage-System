@@ -10,7 +10,7 @@ Built for high-impact environments such as hospitals and emergency workflows, it
 - 🧠 **Hybrid AI Intelligence** (Random Forest + Google Gemini 1.5 Pro)
 - 🏥 **Doctor-Prioritized Command Center**
 - 🛡️ **Safety-First Clinical Logic**
-- 🎨 **Glassmorphism Healthcare UI**
+- 🎨 **Claymorphism Healthcare UI**
 
 ---
 
