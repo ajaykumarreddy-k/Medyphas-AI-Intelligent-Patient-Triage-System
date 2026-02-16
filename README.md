@@ -57,7 +57,6 @@ Powered by **Google Gemini 1.5 Pro**, this layer handles complex reasoning:
 - 📝 **Clinical Summarization:** Generates SOAP notes for doctors automatically.
 
 ---
-
 ## 🔷 High-Level Architecture Diagram
 
 ```mermaid
@@ -92,7 +91,9 @@ flowchart TD
     I --> M[(Patient Records)]
     I --> N[(Doctor Priority Queue)]
 
+
 🧩 Tech Stack & Engineering
+
 🖥 Frontend (Client)
  * Framework: React 18 + TypeScript + Vite
  * Styling: Tailwind CSS (Custom Glassmorphism Design System)
